@@ -1,0 +1,273 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+
+    <div class="global">
+
+        <!--header-->
+        <header>
+
+            <div class="header">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <article class="span12">
+
+                            <div class="row">
+
+                                <article class="span6">
+
+                                    <h1 class="brand">{{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}</h1>
+                                    {{widget('space', 'space', {'height': '20'})|raw}}
+
+                                </article>
+
+                                <article class="span6">
+
+                                    {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                    {{widget('space', 'space', {'height': '20'})|raw}}                                    
+
+                                </article>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <nav>
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <article class="span12">
+
+                            {{widget('navigation', 'navigation', {'align': 'left'})|raw}}
+                            
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <!--content-->
+
+        <div class="container">
+
+            <div class="row">
+
+                <article class="span12">
+
+                    {{widget('space', 'space', {'height': '50'})|raw}}
+
+                    <div class="row">
+
+                        <article class="span4">
+
+                            {{widget('content', 'title1', {content: '<h2><span>What`s</span> Hot?</h2>', lines: 'all'})|raw}}
+
+                            {{widget('image', 'image1', { 'src': asset('images/page2-img1.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            {{widget('content', 'subtitle1', {content: '<h5>Aenean vehicula neque vitae eros.</h5>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'text1', {content: '<p>Aquam mauris viverra sed ultricies id sagittis idi arcu. Aliquam erat volutpat. Aenean arcu mauris semper vel sagittis at blandit eu sapien. Crastill quis massa ante ut luctus orci.</p>', lines: 'all'})|raw}}
+
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+
+                        </article>
+
+                        <article class="span4">
+
+                            {{widget('content', 'title2', {content: '<h2><span>fresh</span> links</h2>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'subtitle2', {content: '<h5>dolor sit ametconsectur adipsing elit, Phasellus commodturpis sit amet.</h5>', lines: 'all'})|raw}}
+
+                            <ul class="list">
+                                <li>{{widget('content', 'listtext1', {content: '<a href="#">Sui blanditiistes es praetiuptatum</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext2', {content: '<a href="#">Welenitimos atququdolores etres</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext3', {content: '<a href="#">Euamolestiasexceuri sint timilique</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext4', {content: '<a href="#">Suincupaqui officia deserunt</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext5', {content: '<a href="#">Aollianimid estlaborum et dolorum</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext6', {content: '<a href="#">Nassafugharum quidemed rerum</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext7', {content: '<a href="#">Sed blandit sem at justo aliquet et congue</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext8', {content: '<a href="#">Quisque sed enim vel tellus</a>', lines: 'all'})|raw}}</li>
+                                <li>{{widget('content', 'listtext9', {content: '<a href="#">Pharetra placerat id non lectus</a>', lines: 'all'})|raw}}</li>
+                            </ul>
+
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+
+                        </article>
+
+                        <article class="span4">
+
+                            {{widget('content', 'title3', {content: '<h2><span>testimonials</span></h2>', lines: 'all'})|raw}}
+
+                            <div class="blockquote">
+                                {{widget('image', 'monimage1', { 'src': asset('images/mon1.jpg'), 'imageWidth': '100px'})|raw}}
+                                <div class="overflow">
+                                    {{widget('content', 'moncontent1', {content: '<blockquote>Fusce non turpis risus, Aliquam erat volutpat. Morbi metus; eu pharetra...</blockquote> <h5>Rita Johnson</h5>', lines: 'all'})|raw}}
+                                </div>
+                            </div>
+
+                            <div class="blockquote">
+                                {{widget('image', 'monimage2', { 'src': asset('images/mon2.jpg'), 'imageWidth': '100px'})|raw}}
+                                <div class="overflow">
+                                    {{widget('content', 'moncontent2', {content: '<blockquote>Fusce non turpis risus, Aliquam erat volutpat. Morbi metus; eu pharetra...</blockquote> <h5>Rita Johnson</h5>', lines: 'all'})|raw}}
+                                </div>
+                            </div>
+
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+
+                        </article>
+
+                    </div>
+
+                    {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+
+                    <div class="row">
+
+                        <article class="span8 team">
+
+                            {{widget('content', 'title3', {content: '<h2><span>Our</span> team</h2>', lines: 'all'})|raw}}
+                            
+                            <div class="row">
+                            
+                                <article class="span2">
+                                    {{widget('image', 'team-image1', { 'src': asset('images/team1.jpg'), 'imageWidth': '420px'})|raw}}
+                                    {{widget('content', 'team-title1', {content: '<h5>Jessica Priston</h5>', lines: 'all'})|raw}}
+                                    {{widget('content', 'team-text1', {content: '<p>Aquam mauris viverra</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                    {{widget('image', 'team-image7', { 'src': asset('images/team5.jpg'), 'imageWidth': '420px'})|raw}}
+                                    {{widget('content', 'team-title7', {content: '<h5>Sam Kromstain</h5>', lines: 'all'})|raw}}
+                                    {{widget('content', 'team-text7', {content: '<p>Aquam mauris viverra</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                            
+                                <article class="span2">
+                                    {{widget('image', 'team-image2', { 'src': asset('images/team2.jpg'), 'imageWidth': '420px'})|raw}}
+                                    {{widget('content', 'team-title2', {content: '<h5>Mark Johnson</h5>', lines: 'all'})|raw}}
+                                    {{widget('content', 'team-text2', {content: '<p>Aquam mauris viverra</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                    {{widget('image', 'team-image3', { 'src': asset('images/team6.jpg'), 'imageWidth': '420px'})|raw}}
+                                    {{widget('content', 'team-title3', {content: '<h5>Bradley Grosh</h5>', lines: 'all'})|raw}}
+                                    {{widget('content', 'team-text3', {content: '<p>Aquam mauris viverra</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                            
+                                <article class="span2">
+                                    {{widget('image', 'team-image4', { 'src': asset('images/team3.jpg'), 'imageWidth': '420px'})|raw}}
+                                    {{widget('content', 'team-title4', {content: '<h5>Olivia Grosh</h5>', lines: 'all'})|raw}}
+                                    {{widget('content', 'team-text4', {content: '<p>Aquam mauris viverra</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                    {{widget('image', 'team-image5', { 'src': asset('images/team7.jpg'), 'imageWidth': '420px'})|raw}}
+                                    {{widget('content', 'team-title5', {content: '<h5>Nikki adams</h5>', lines: 'all'})|raw}}
+                                    {{widget('content', 'team-text5', {content: '<p>Aquam mauris viverra</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                            
+                                <article class="span2">
+                                    {{widget('image', 'team-image6', { 'src': asset('images/team4.jpg'), 'imageWidth': '420px'})|raw}}
+                                    {{widget('content', 'team-title6', {content: '<h5>Patrick Pool</h5>', lines: 'all'})|raw}}
+                                    {{widget('content', 'team-text6', {content: '<p>Aquam mauris viverra</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                            
+                            </div>
+                        
+                        </article>
+                        
+                        <article class="span4 icons">
+                        
+                            {{widget('content', 'title4', {content: '<h2><span>Latest</span> Recipes </h2>', lines: 'all'})|raw}}
+
+                            {{widget('image', 'iconimage1', { 'src': asset('images/icon1.png'), 'imageWidth': '70px'})|raw}}
+
+                            <div class="overflow">
+
+                                {{widget('content', 'iconsubtitle1', {content: '<h5>Cras lectus justo</h5>', lines: 'all'})|raw}}
+                                {{widget('content', 'iconcontent1', {content: '<p>Cras lectus justo, congue ac malesuada sit amet, laoreet nec velit duis hendrerit est at leo venenatis non.</p>', lines: 'all'})|raw}}
+
+                            </div>
+
+                            <div class="clear"></div>
+
+                            {{widget('image', 'iconimage2', { 'src': asset('images/icon2.png'), 'imageWidth': '70px'})|raw}}
+
+                            <div class="overflow">
+
+                                {{widget('content', 'iconsubtitle2', {content: '<h5>Aenean sit amet massa</h5>', lines: 'all'})|raw}}
+                                {{widget('content', 'iconcontent2', {content: '<p>Vivamus lectus ipsum, vehicula sed ultrices ac, adipiscing non ante. Fusce ut nisi vel sem ultricies.</p>', lines: 'all'})|raw}}
+
+                            </div>
+
+                            <div class="clear"></div>
+
+                            {{widget('image', 'iconimage3', { 'src': asset('images/icon3.png'), 'imageWidth': '70px'})|raw}}
+
+                            <div class="overflow">
+
+                                {{widget('content', 'iconsubtitle3', {content: '<h5>Maecenas pulvinar</h5>', lines: 'all'})|raw}}
+                                {{widget('content', 'iconcontent3', {content: '<p>Fusce ut nisi vel sem ultricies lacinia laoreet ultrices. Nullam elit consectetur sit amet ultrices eget.</p>', lines: 'all'})|raw}}
+
+                            </div>
+
+                            <div class="clear"></div>
+
+                            {{widget('button', 'button', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+                        
+                        </article>
+
+                    </div>
+
+                    {{zone('main')|raw}}
+                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                </article>
+
+            </div>
+
+        </div>
+
+        <!--footer-->
+        <footer>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <section class="span12">
+
+                        {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+                        {{widget('companyname', 'companyname', {"business": "Thai Food"})|raw}}
+                        {{widget('content', 'copyright_copy', {content: '&nbsp;&copy;&nbsp;2013', lines: 'all'})|raw}}
+                        {{widget('content', 'copyright_link', {content: '<a href="#">Privacy Policy</a>', lines: 'all'})|raw}}
+                        {{widget('space', 'space', {'height': '30'})|raw}}
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+    
+</div>
+
+{% endblock %}
