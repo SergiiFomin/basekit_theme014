@@ -236,38 +236,36 @@
 
 /*Forms*/
 
-.container{
-  textarea{
-    resize: none;
-  }
-  select, 
-  textarea, 
-  input[type="text"], 
-  input[type="password"], 
-  input[type="datetime"], 
-  input[type="datetime-local"], 
-  input[type="date"], 
-  input[type="month"], 
-  input[type="time"], 
-  input[type="week"], 
-  input[type="number"], 
-  input[type="email"], 
-  input[type="url"], 
-  input[type="search"], 
-  input[type="tel"], 
-  input[type="color"], 
-  .uneditable-input{
-    font-size: 12px;
-    .box-sizing(border-box);
-    box-shadow: none;
-    margin-bottom: 20px !important;
-    color: @dark !important;
-    .transition(all .2s linear);
-    border: 1px solid #f6f0ec !important;
-    &:focus{
-      background: @color-swatch5 !important;
-      color: @color-swatch1 !important;
-    }
+textarea{
+  resize: none;
+}
+select, 
+textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input{
+  font-size: 12px;
+  .box-sizing(border-box);
+  box-shadow: none;
+  margin-bottom: 20px !important;
+  color: @dark !important;
+  .transition(all .2s linear);
+  border: 1px solid #f6f0ec !important;
+  &:focus{
+    background: @color-swatch5 !important;
+    color: @color-swatch1 !important;
   }
 }
 
@@ -567,12 +565,27 @@ ul li{
       /*border: 4px solid @color-swatch1;*/
     }
   }
+  .content-wrapper{
+    text-align: center;
+    .title{
+      display: block;
+      padding-top: 20px;
+      font: 30px/40px Times New Roman, Times, serif;
+      color: @color-swatch6;
+      text-transform: uppercase;
+    }
+    .description{
+
+    }
+  }
 }
 
 /*--- header end ------*/
 
 /*------ content ------- */
 
+button.button,
+input.button,
 .btn {
   display: inline-block;
   border: none;
@@ -605,6 +618,7 @@ header, footer, #content{
 }
 
 .gallery-widget{
+  overflow: hidden;
   margin: 0;
   li{
     float: left;
@@ -633,38 +647,36 @@ header, footer, #content{
 
 /* end background image */
 
-.container{
-  input, textarea {
-    position: relative;
-    outline: none;
-    border: none;
-    .border-radius(0);
-    .box-shadow(0 0 0);
+input, textarea {
+  position: relative;
+  outline: none;
+  border: none;
+  .border-radius(0);
+  .box-shadow(0 0 0);
 
-    line-height: 20px;
-    color: @textColor;
-    padding: 5px 10px;
-    width: 100%;
-    margin: 0;
-    &:focus {
-      .box-shadow(0 0 0);
-      border: none;
-      background: none;
-    }
-    &:focus:invalid:focus{
-      .box-shadow(0 0 0);
-      border: none;
-      background: none;
-    }
+  line-height: 20px;
+  color: @textColor;
+  padding: 5px 10px;
+  width: 100%;
+  margin: 0;
+  &:focus {
+    .box-shadow(0 0 0);
+    border: none;
+    background: none;
   }
-  input{
-    .size(30px, 100%);   
-    .box-sizing(border-box); 
+  &:focus:invalid:focus{
+    .box-shadow(0 0 0);
+    border: none;
+    background: none;
   }
-  textarea{
-    width: 100%;
-    .box-sizing(border-box); 
-  }
+}
+input{
+  .size(30px, 100%);   
+  .box-sizing(border-box); 
+}
+textarea{
+  width: 100%;
+  .box-sizing(border-box); 
 }
 
 p {
@@ -691,6 +703,12 @@ a[href^="tel:"] {
   text-decoration:none;
 }
 
+.widget.logo{
+  .logo{
+    display: inline;
+  }
+}
+
 a{
   color:@color-swatch3;
   text-decoration: underline;
@@ -711,37 +729,6 @@ h1{
   color: @font-swatch1-color;
   font: 58px/60px Times New Roman, Times, serif;
   color: @color-swatch6;
-  &.brand{
-    margin: 0;
-    padding: 0;
-    .companyheader{
-      display: inline-block;
-    }
-    a{
-      color: @color-swatch3;
-      text-decoration: none;
-      position: relative;
-      &:hover{
-        color: @color-swatch1;
-      }
-      .logo{
-        margin: 0px;
-        font-size: 0;
-        line-height: 0;
-        img{
-          display: block;
-        }
-        a{
-          display: inline-block;
-        }   
-      }
-      .company-name{
-        font: 15px/19px Times New Roman, Times, serif;
-        color: #afaca7;
-        letter-spacing: 4px;
-      }
-    }   
-  }
 }
 
 h2{
@@ -876,7 +863,7 @@ div.price{
         border: 5px solid rgba(0, 0, 0, .07);
         .border-radius(1000px);
         box-shadow: 0 0 5px rgba(255, 255, 255, 1);
-
+        .border-radius(1000px);
         border: 5px solid @color-swatch1;
         border: 5px solid rgba(255, 255, 255, 1);
         box-shadow: 0 0 5px rgba(0, 0, 0, .07);
@@ -1079,14 +1066,14 @@ div[id$="copyright_link"]{
         width: 24px;
         height: 24px;
         .border-radius(1000px);
-        background-color: @socialBackground;
-        color: @socialColor;
+        background-color: @color-swatch3;
+        color: @color-swatch1;
         font-size: 0;
         line-height: 0;
         .transition(all .2s linear);
         &:hover{
-          background-color: @socialBackgroundHover;
-          color: @socialColorHover;
+          background-color: @color-swatch2;
+          color: @color-swatch1;
         }
         &:before{
           display: block;
@@ -1143,6 +1130,87 @@ div[id$="copyright_link"]{
   }
 }
 
+.header{
+  .socialicons{
+    .icons {
+      span{
+        a{
+          background-color: @socialBackground;
+          color: @socialColor;
+          &:hover{
+            background-color: @socialBackgroundHover;
+            color: @socialColorHover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.twitter{
+  ul.twitter{
+    margin: 0;
+    li{
+      list-style: none;
+      margin-bottom: 18px;
+      overflow: hidden;
+      .twitter-profile-pic{
+        float: left;
+        margin-right: 20px;
+      }
+      .twitter-content{
+        p{
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.widget.tweet {
+   padding: 14px 0;
+   a {
+    padding: 8px 10px 8px 32px;
+    margin: 0;
+    border: 1px solid #057ed0;
+    background-image: image('/images/twitter.png');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    margin: 0em;
+    .border-radius(4px);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    font-family: @font-swatch2-font-family;
+    font-size:.9em;
+    font-weight:@font-swatch7-font-weight;
+    background-color: #32bbef;
+    color: @color-swatch1;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    &:hover, &:active {
+      border: 1px solid #096eb3;
+      background-color: #2cacdc;
+    }
+  }
+}
+
+.widget.clicktocall a {
+  background-image: image('/images/ic-call.png');
+  background-color: @color-swatch3;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 38px;
+  margin: 0;
+  color: @color-swatch1;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  &:hover {
+    background-color: @color-swatch2;
+    text-decoration: none;
+  }
+}
+
 /*----- media queries ------*/
 
 /*== 1200px and beyond ===================================================
@@ -1180,7 +1248,7 @@ div[id$="copyright_link"]{
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px){
 
-  h1.brand {
+  .widget.logo {
     text-align: center;
   }
   .socialicons .icons {

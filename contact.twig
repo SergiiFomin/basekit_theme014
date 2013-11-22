@@ -21,7 +21,7 @@
 
                                 <article class="span6">
 
-                                    <h1 class="brand">{{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}</h1>
+                                    {{widget('logo', 'name', {"defaultlogo": asset('images/logo.png')})|raw}}
                                     {{widget('space', 'space', {'height': '20'})|raw}}
 
                                 </article>
@@ -137,8 +137,7 @@
 
                         {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
                         {{widget('companyname', 'companyname', {"business": "Thai Food"})|raw}}
-                        {{widget('content', 'copyright_copy', {content: '&nbsp;&copy;&nbsp;2013', lines: 'all'})|raw}}
-                        {{widget('content', 'copyright_link', {content: '<a href="#">Privacy Policy</a>', lines: 'all'})|raw}}
+                        {{widget('profile', 'copyright', { 'profileType':'copyright' })|raw}}
                         {{widget('space', 'space', {'height': '30'})|raw}}
 
                     </section>
