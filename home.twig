@@ -77,6 +77,8 @@
 
                     <article class="span12">
 
+                        {{zone('main')|raw}}
+
                         {{widget('space', 'space', {'height': '50'})|raw}}
 
                         {{widget('content', 'content', {content: '<h2><span>Today`s</span> menu:</h2>', lines: 'all'})|raw}}
@@ -210,8 +212,6 @@
                         </article>
 
                     </div>
-
-                    {{zone('main')|raw}}
 
                 </article>
 
